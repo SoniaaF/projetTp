@@ -1,0 +1,250 @@
+body{
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    /*font-family: 'Livvic', sans-serif;*/
+    font-family: 'Merriweather', serif;
+}
+/* Définition du titre */
+.title{
+    text-align: center;
+    margin-left: 8%;
+    /*font-weight: bold;*/
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+}
+/* Définition des drapeaux pour le choix de langue */
+.drapeau{
+    float: right; 
+    margin: 5px;
+    width: 40px;
+    height: 25px;
+    margin-top: 15px;
+}
+/* Définition de la navbar */
+nav ul li{
+    margin: 0 50px; 
+}
+.nav-link {
+    text-align: center;
+    font-size: 110%;
+    outline: none;
+}
+.navbar{
+    border-radius: 12px;
+}
+.hover :hover {
+    color: #EB520F;
+    transform: scale(1.2);
+    z-index: 1000;
+}
+/* Définition de la flèche pour remonté en haut */
+#rideUp{
+    outline-style: none;
+    float: right;
+}
+/* Définition des images de présentation */
+.img{
+    text-align: center;
+    margin-top: 20px;
+}
+/* Définition image association */
+.assoc{
+    height: 200px;
+    width: 700px;
+}
+/* Définition du texte d'introduction du site */
+.intro{
+    margin-top: 4%;
+    text-align: center;
+    color: black;
+    font-family: 'Playfair Display', serif;
+}
+.introIpl{
+    font-size: 80px;
+}
+.introTeach{
+    font-size: 50px;
+}
+hr{
+    display: block;
+    width: 40%;
+    background-color: black;
+    margin-top: -15px;
+    height: 2px;
+    border-radius: 5px;
+}
+/* Définition de la présentation de l'association et des intervenants */
+.presentations{
+    margin-top: 10px;
+    color: #404143;
+    font-weight: bold;
+}
+/* Création de l'effet parallax */
+.parallax{
+    background-image: url(../img/amiens.jpeg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Définition de la catégorie prix */
+.schedule{
+    margin-top: 2%;
+}
+/* Définition du formulaire de contact */
+.contact{
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 30px;
+    color: #777;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 2%;
+}
+/* Couleur de fond en gris */
+.color{
+    background-color: grey;
+}
+/* Définition de la structure du formulaire de contact */
+#contact {
+    background: #F9F9F9;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+/* Définition de la police des champs du formulaire de contact */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+    font: 12px "Roboto";
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+/* Définition du champ textarea du formulaire de contact */
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+/* Définition du boutton du formulaire */
+#contact button[type="submit"] {
+    cursor: pointer;
+    border: none;
+    background: grey;
+    color: #FFF;
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 50%;
+    margin-left: 75%;
+}
+/* Définition de la couleur au survol du boutton du formulaire de contact */
+#contact button[type="submit"]:hover {
+    background: #43A047;
+}
+/* Emplacement de google map */
+.map{
+    float: left;
+    margin-top: 1%;
+}
+/* Définition du "titre" des informations de contact */
+.Ipl{
+    font-weight: bold;
+}
+/* Définition du formulaire d'inscription */
+#registration {
+    color: #fff;
+    background: #2d2d2d;
+    background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(60,60,60)),
+        color-stop(0.74, rgb(43,43,43)),
+        color-stop(1, rgb(60,60,60))
+        );
+    background: -moz-linear-gradient(
+        center bottom,
+        rgb(60,60,60) 0%,
+        rgb(43,43,43) 74%,
+        rgb(60,60,60) 100%
+        );
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 430px;
+}
+
+#registration a {
+    color: #8c910b;
+    text-shadow: 0px -1px 0px #000;
+}
+
+#registration fieldset {
+    padding: 20px;
+}
+/* Fait disparaître les titres */
+.menuMobile {
+    display: none;
+}
+.titleMobile{
+    display: none;
+}
+.teachIntro{
+    display: none;
+}
+.hrMobile{
+    display: none;
+}
+/* Responsive */
+@media screen and (max-width: 700px){
+    .menuMobile {
+        display: block;
+    }
+    .title{
+        display: none;
+    }
+    .titleMobile{
+        display: block;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+    }
+    .introIpl{
+        display:none;
+    }
+    .assoc{
+        height: 200px;
+        width: 300px;
+    }
+    .introTeach{
+        display: none;
+    }
+    .teachIntro{
+        display: block;
+        font-size: 20px;
+        /*text-decoration: underline;*/
+        /*border-bottom : 1px solid;*/
+        text-align: center;
+    }
+    hr{
+        display: none;
+    }
+    .hrMobile{
+        display: block;
+        width: 85%;
+        background-color: black;
+        margin-top: -15px;
+        border-radius: 5px;
+    }
+}

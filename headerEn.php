@@ -37,7 +37,7 @@
                     <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="index.php">Accueil</a>
+                                <a class="nav-link" href="index.php">Home</a>
                             </li>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="informations.php">Informations</a>
@@ -46,13 +46,13 @@
                                 <a class="nav-link" href="test.php">Test</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="contact.php">Nous contacter</a>
+                                <a class="nav-link" href="contact.php">Contact us</a>
                             </li>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="inscription.php">Inscription</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="connexion.php">Connexion</a>
+                                <a class="nav-link" href="connexion.php">Connection</a>
                             </li>
                         </ul>
                     </div>
