@@ -37,7 +37,7 @@
                     <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="index.php">Accueil</a>
+                                <a class="nav-link" href="français.php">Accueil</a>
                             </li>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="informations.php">Informations</a>
@@ -65,10 +65,4 @@
                 <hr>
             </div>
         </div>
-        <!-- Script -->
-        <script src="assets/css/jquery-3.4.0.min.js"></script>
-        <script src="assets/css/popper.min.js"></script>
-        <script src="assets/css/bootstrap.min.js"></script>
-        <script src="main.js"></script>
-    </body>
-</html>
+

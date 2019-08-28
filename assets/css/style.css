@@ -108,7 +108,7 @@ hr{
 }
 /* Couleur de fond en gris */
 .color{
-    background-color: grey;
+    background-color: #343A40;
 }
 /* Définition de la structure du formulaire de contact */
 #contact {
@@ -150,7 +150,7 @@ hr{
 }
 /* Définition de la couleur au survol du boutton du formulaire de contact */
 #contact button[type="submit"]:hover {
-    background: #43A047;
+    background: black;
 }
 /* Emplacement de google map */
 .map{
@@ -160,6 +160,10 @@ hr{
 /* Définition du "titre" des informations de contact */
 .Ipl{
     font-weight: bold;
+    color: white;
+}
+.renseignement{
+    color: white;
 }
 /* Définition du formulaire d'inscription */
 #registration {

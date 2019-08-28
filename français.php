@@ -1,4 +1,4 @@
-<?php require_once 'headerEn.php'; ?>
+<?php require_once 'header.php'; ?>
 <div class='container'>
     <!-- Photo de l'association -->
     <div class='img'>

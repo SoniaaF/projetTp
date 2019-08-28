@@ -13,3 +13,4 @@
     </form>
 </div>
 <input type="image" src='assets/img/fleche-haut.jpg' width="50px" height="50px" id="rideUp" />
+<?php require_once 'footer.php'; ?>

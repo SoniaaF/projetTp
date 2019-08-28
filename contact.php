@@ -2,7 +2,7 @@
 <div class="container-fluid color">
     <!-- Div pour les information de contact avec google map -->
     <div class="row col-6 map">
-        <div class="container">
+        <div class="container renseignement">
             <p class="text-center Ipl">Institut Picard de Langue</p>
             <p><b>Numéro de téléphone :</b> 00.00.00.00.00</p>
             <p><b>Adresse mail :</b> raphaelvillatte@gmail.com</p>
@@ -40,3 +40,4 @@
         </div>
     </div>
 </div>
+<?php require_once 'footer.php'; ?>

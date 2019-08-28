@@ -1,25 +1,39 @@
 <?php require_once 'header.php'; ?>
-<div class='container'>
-    <!-- Photo de l'association -->
-    <div class='img'>
-        <img class='assoc' src="assets/img/classe.jpg" alt="photo de l'association"> 
-    </div>
-    <!-- Présentation de l'association -->
-    <div class='presentations'>
-        <p>PRESENTATION ASSOCIATION :</p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, tempora, officia quibusdam dolore praesentium qui quisquam id molestias eos nemo aspernatur sapiente eveniet velit dolores aliquid. Optio, tempore voluptatem eos?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, rem, vero, optio blanditiis delectus porro ut accusantium iusto enim neque cum libero dolorem recusandae! Possimus, facilis quo perspiciatis assumenda in.</p>
-    </div>
-    <!-- Photo des intervenants -->
-    <div class='img'>
-        <img class='assoc' src="assets/img/classe.jpg" alt="photo des intervenants de l'association"> 
-    </div>
-    <!-- Présentation des intervenants -->
-    <div class='presentations'>
-        <p>PRESENTATION INTERVENANTS :</p>
-        <p> Monsieur Villate Raphael : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, tempora, officia quibusdam dolore praesentium qui quisquam id molestias eos nemo aspernatur sapiente eveniet velit dolores aliquid. Optio, tempore voluptatem eos?</p>
-        <p> Madame Sezer Sheniz : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, rem, vero, optio blanditiis delectus porro ut accusantium iusto enim neque cum libero dolorem recusandae! Possimus, facilis quo perspiciatis assumenda in.</p>
-    </div>
-</div>
-<!-- Input de la flèche qui sert à remonté -->
-<input type="image" src='assets/img/fleche-haut.jpg' width="50px" height="50px" id="rideUp" />
+<?php
+$IDTest = isset($_POST['orange']) ? $_POST['orange'] : 0;
+$Question = isset($_POST['question']) ? $_POST['question'] : 0;
+$Answer1 = isset($_POST['answer1']) ? $_POST['answer1'] : 0;
+$Answer2 = isset($_POST['answer2']) ? $_POST['answer2'] : 0;
+$Answer3 = isset($_POST['answer3']) ? $_POST['answer3'] : 0;
+$Answer4 = isset($_POST['answer4']) ? $_POST['answer4'] : 0;
+$TrueAnswer = isset($_POST['trueAnswer']) ? $_POST['trueAnswer'] : 0;
+include 'controllers/TestDeleteCtrl.php';
+include 'controllers/TestUpdateCtrl.php';
+include 'controllers/TestCreateCtrl.php';
+include 'controllers/TestReadCtrl.php';
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jeu QCM : qui veut gagner des millions</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <?php foreach ($testList as $test): ?>
+            <p><?= $test->IDTest ?></p>
+            <div class="container">
+                <div id="question"><?= $test->Question ?></div>
+                <form action="jeu.php" method="POST">
+                    <div class="row">
+                        <div class="col-lg-offset-1 col-lg-5"><input type="radio" name="reponse" class="btn btn-info" value="<?= $test->Answer1 ?>"><?= $test->Answer1 ?></div>
+                        <div class="col-lg-offset-1 col-lg-5"><input type="radio" name="reponse" class="btn btn-info" value="<?= $test->Answer2 ?>"><?= $test->Answer2 ?></div>
+                        <div id="separation"> </div>
+                        <div class="col-lg-offset-1 col-lg-5"><input type="radio" name="reponse" class="btn btn-info" value="<?= $test->Answer3 ?>"><?= $test->Answer3 ?></div>
+                        <div class="col-lg-offset-1 col-lg-5"><input type="radio" name="reponse" class="btn btn-info" value="<?= $test->Answer4 ?>"><?= $test->Answer4 ?></div>
+                    </div>
+                </form>
+            </div>
+        <?php endforeach; ?>
+        <?php require_once 'footer.php'; ?>
