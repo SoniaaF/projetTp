@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
         <!--<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">-->    
         <!--<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">-->
         <!--<link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">-->
@@ -20,9 +20,9 @@
             <!-- Div pour le titre et la navbar -->
             <div class="container-fluid">
                 <!-- Drapeau pour la langue française -->
-                <a href="anglais.php"><img src="assets/img/en.jpg" class="drapeau" alt="Drapeau anglais, passer le site en anglais"></a>
+                <a href="../../anglais.php"><img src="../../assets/img/en.jpg" class="drapeau" alt="Drapeau anglais, passer le site en anglais"></a>
                 <!-- Drapeau pour la langue anglaise -->
-                <a href="index.php"><img src="assets/img/fr.jpg" class="drapeau" alt="Drapeau français, passer le site en français"></a>
+                <a href="../../français.php"><img src="../../assets/img/fr.jpg" class="drapeau" alt="Drapeau français, passer le site en français"></a>
                 <!-- Titre du site -->
                 <h1 class="title">Institut Picard de Langues</h1>
                 <h1 class="titleMobile">I.P.L France</h1>
@@ -37,22 +37,22 @@
                     <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="index.php">Home</a>
+                                <a class="nav-link" href="../../index.php">Home</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="informations.php">Informations</a>
+                                <a class="nav-link" href="../../informations.php">Informations</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="test.php">Test</a>
+                                <a class="nav-link" href="../../test.php">Test</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="contact.php">Contact us</a>
+                                <a class="nav-link" href="../../contact.php">Contact us</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="inscription.php">Inscription</a>
+                                <a class="nav-link" href="views/User/addUserForm.php">Inscription</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="connexion.php">Connection</a>
+                                <a class="nav-link" href="../../connexion.php">Connection</a>
                             </li>
                         </ul>
                     </div>
