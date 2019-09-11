@@ -6,17 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../assets/css/style.css">
-        <!--<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">-->    
-        <!--<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">-->
-        <!--<link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
         <!--Police pour les titres du site-->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet"> 
         <title>Institut Picard de Langues</title>
     </head>
     <body>
-        <!-- Div pour le parallax -->
-        <div class="parallax">
+        <!-- Div globale -->
+        <div class="picture">
             <!-- Div pour le titre et la navbar -->
             <div class="container-fluid">
                 <!-- Drapeau pour la langue française -->
@@ -24,10 +21,13 @@
                 <!-- Drapeau pour la langue anglaise -->
                 <a href="../../français.php"><img src="../../assets/img/fr.jpg" class="drapeau" alt="Drapeau français, passer le site en français"></a>
                 <!-- Titre du site -->
+                <div class='responsiveTitle'>
                 <h1 class="title">Institut Picard de Langues</h1>
+                <!-- Titre responsive -->
                 <h1 class="titleMobile">I.P.L France</h1>
                 <p class="teachIntro">We teach french and english.</p>
                 <hr class="hrMobile">
+                </div>
                 <!-- navbar -->
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <a class="navbar-brand menuMobile text-white">Menu</a>
@@ -43,22 +43,26 @@
                                 <a class="nav-link" href="../../informations.php">Informations</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="../../test.php">Test</a>
+                                <a class="nav-link" href="/views/Test/TestView.php">Test</a>
                             </li>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="../../contact.php">Nous contacter</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="views/User/addUserForm.php">Inscription</a>
+                                <a class="nav-link" href="/views/User/addUserForm.php">Inscription</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="../../connexion.php">Connexion</a>
+                                <a class="nav-link" href="/views/User/userLogin.php">Connexion</a>
                             </li>
                         </ul>
                     </div>
-                </nav>  
+                </nav> 
             </div>
-            <!-- Div pour la présentation du site -->
+            <!-- Div pour l'image en dessous de la navbar -->
+                <div class='pictureResponsive'>
+                    <img src="../../assets/img/cathedrale.png" alt="">
+                </div>
+            <!-- Div pour le slogan du site -->
             <div class='intro'>
                 <p class="introIpl">IPL France</p>
                 <p class="introTeach">We teach french and english.</p>

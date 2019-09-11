@@ -28,7 +28,6 @@ CREATE TABLE User(
         lastName  Varchar (50) NOT NULL ,
         firstName Varchar (50) NOT NULL ,
         Mail      Varchar (50) NOT NULL ,
-        birthDate Date NOT NULL ,
         password  Varchar (60) NOT NULL ,
         security  Int NOT NULL ,
         id_Test   Int NOT NULL

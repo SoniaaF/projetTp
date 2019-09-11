@@ -1,4 +1,6 @@
+
 <?php
+
 
 include_once '../../config.php';
 
@@ -35,10 +37,6 @@ class User {
 
     public function getMail() {
         return $this->mail;
-    }
-
-    public function getBirthDate() {
-        return $this->birthDate;
     }
 
     public function setId($id) {

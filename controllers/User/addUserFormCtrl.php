@@ -6,7 +6,7 @@ $stringPattern = '/^[a-zA-Záàâäãåçéèêëíìîïñóòôöõúùûüý�
 $mailPattern = '/^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$/';
 $passwordPattern = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_?])([-+!*$@%_?\w]{8,15})$/';
 //   On test chaque input en fonction de son pattern et si ils ne correspondent pas on insert un message d'erreur
-//   et on réinitialise le POST afin de ne pas la garder dans le champ
+//   et on réinitialise le POST afin de ne pas le garder dans le champ
 $formError = [];
 if ($_POST) {
     // Si le champs Nom est vide
@@ -39,7 +39,7 @@ if ($_POST) {
     } else {
         $mail = trim(strip_tags($_POST['mail']));
     }
-// Si le champs mot de passe est vide
+    // Si le champs mot de passe est vide
     if (empty($_POST['password'])) {
         $formError['password'] = 'Veuillez entrer un mot de passe.';
         // Si le mot de passe est incorrect
@@ -56,8 +56,10 @@ if (count($_POST) > 3) {
     $mail = isset($_POST['mail']) ? $_POST['mail'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
     $newUser = new User();
-    //on appelle la methode qui insere l'utilisateur dans la BDD puis on detruit l'objet
-    $User = $newUser->createUser($lastName, $firstName, $mail, $password);
+    if (empty($formError)) {
+        //on appelle la methode qui insere l'utilisateur dans la BDD
+        $User = $newUser->createUser($lastName, $firstName, $mail, $password);
+    }
 }
 require_once '../../views/User/addUserForm.php';
 ?> 

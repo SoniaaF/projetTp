@@ -3,22 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/sonia/Documents/Projet/projetTp/header.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/controllers/User/deleteUserCtrl.php</file>
             <file>file:/home/sonia/Documents/Projet/projetTp/models/TestModel.php</file>
             <file>file:/home/sonia/Documents/Projet/projetTp/views/User/addUserForm.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/models/Model.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/inscription.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/views/User/userList.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/controllers/User/updateUserFormCtrl.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/models/User.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/controllers/User/profilUserCtrl.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/index.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/views/User/updateUserForm.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/controllers/User/userListCtrl.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/controllers/User/deleteUserConfirmCtrl.php</file>
             <file>file:/home/sonia/Documents/Projet/projetTp/controllers/User/addUserFormCtrl.php</file>
-            <file>file:/home/sonia/Documents/Projet/projetTp/views/User/profilUser.php</file>
+            <file>file:/home/sonia/Documents/Projet/projetTp/models/User.php</file>
         </group>
     </open-files>
 </project-private>
