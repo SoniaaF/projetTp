@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'controllers/User/userListCtrl.php';
 require_once 'header.php';
 ?>

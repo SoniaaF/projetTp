@@ -1,8 +1,13 @@
 <?php
-require_once 'models/User.php';
+require_once '../../models/User.php';
 $user = new User();
-$user->setId($_GET['id']);
-$user->getUserById();
-$pageTitle = $user->getFirstName() . ' ' . $user->getLastName();
-require_once 'views/User/profilUser.php';
+
+$pageTitle = $_SESSION['user']['lastName'].' '.$_SESSION['user']['firstName'];
+
+if(isset($_POST['disconnect'])){
+    $_SESSION=[];
+    header('Location:../../français.php');
+    
+}
+
 ?>

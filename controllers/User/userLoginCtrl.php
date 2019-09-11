@@ -1,35 +1,22 @@
 <?php
 
 require_once '../../models/User.php';
-if(isset($_POST['username']) && isset($_POST['password']))
-{
-    
-    // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
-    // pour éliminer toute attaque de type injection SQL et XSS
-    $username = mysqli_real_escape_string($db,htmlspecialchars($_POST['username'])); 
-    $password = mysqli_real_escape_string($db,htmlspecialchars($_POST['password']));
-    
-    if($username !== "" && $password !== "")
-    {
-        $requete = "SELECT count(*) FROM utilisateur where 
-              nom_utilisateur = '".$username."' and mot_de_passe = '".$password."' ";
-        $exec_requete = mysqli_query($db,$requete);
-        $reponse      = mysqli_fetch_array($exec_requete);
-        $count = $reponse['count(*)'];
-        if($count!=0) // nom d'utilisateur et mot de passe correctes
-        {
-           $_SESSION['username'] = $username;
-           header('Location: principale.php');
+$user = new User();
+//on verrifie si l'utilisateur à essayer de se connecter
+if (isset($_POST['connect'])) {
+    $userconnect =$user->emailExists($_POST['mail']);
+    //On verrifie si l'adresse mail existe dans la base de donées
+    if ($userconnect) {
+        //Si elle existe on vérifie que le mot de passe est le bon
+        if (password_verify($_POST['password'], $userconnect['password'])){
+            //Si oui on enregistre l'utilisateur dans la session
+            $_SESSION['user'] = $userconnect;
+            header('Location:/../français.php');
+        }else{
+            $connectError = 'Identifiant ou mot de passe incorrect.';
         }
-        else
-        {
-           header('Location: userLogin.php?erreur=1'); // utilisateur ou mot de passe incorrect
-        }
-    }
-    else
-    {
-       header('Location: userLogin.php?erreur=2'); // utilisateur ou mot de passe vide
+    } else {
+        $connectError = 'Identifiant ou mot de passe incorrect.';
     }
 }
-
 ?>

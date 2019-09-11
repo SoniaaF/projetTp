@@ -58,13 +58,20 @@ class User {
             $query->bindValue(':lastName', $lastName, PDO::PARAM_STR);
             $query->bindValue(':firstName', $firstName, PDO::PARAM_STR);
             $query->bindValue(':mail', $mail, PDO::PARAM_STR);
-            $query->bindValue(':password', $password, PDO::PARAM_STR);
+            $query->bindValue(':password', password_hash($password, 1), PDO::PARAM_STR);
             //execution de la requete
             $query->execute();
             $error = $query->errorInfo();
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    }
+    public function emailExists($mail){
+        $sql = "SELECT * FROM User WHERE mail = :mail";
+        $query = $this->db->prepare($sql);
+        $query->bindValue(':mail',$mail);
+        $query->execute();
+        return $query->fetch(PDO::FETCH_ASSOC);
     }
 
     //methode qui met à jour le patient
@@ -108,18 +115,14 @@ class User {
         return false;
     }
 
-    public function getUserById() {
-        $request = $this->db->prepare('SELECT * FROM `users` WHERE `id` = :id');
-        $request->bindValue(':id', $this->id, PDO::PARAM_INT);
+    public function getUserById($id) {
+        $request = $this->db->prepare('SELECT * FROM `User` WHERE `id` = :id');
+        $request->bindValue(':id', $id, PDO::PARAM_INT);
         if ($request->execute()) {
             $user = $request->fetch(PDO::FETCH_OBJ);
             $this->lastName = $user->lastName;
             $this->firstName = $user->firstName;
-            $this->birthDate = $user->birthDate;
-            $this->address = $user->address;
-            $this->zipCode = $user->zipCode;
-            $this->phoneNumber = $user->phoneNumber;
-            $this->idService = $user->idService;
+         
             return true;
         }
         return false;

@@ -1,6 +1,7 @@
 <?php
 
 require_once '../../models/User.php';
+$user = new User();
 // pattern pour la vérification du formulaire
 $stringPattern = '/^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._-]{3,60}$/';
 $mailPattern = '/^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$/';
@@ -33,6 +34,8 @@ if ($_POST) {
     if (empty($_POST['mail'])) {
         $formError['mail'] = 'Veuillez entrer une adresse mail.';
         // Si le mail est incorrect
+    } elseif ($user->emailExists($_POST['mail'])) {
+        $formError['mail'] = 'Cette adresse mail est déjà utilisée.';
     } elseif (!preg_match($mailPattern, $_POST['mail'])) {
         $formError['mail'] = 'Veuillez entrer une adresse mail valide.';
         // Si le mail est correct

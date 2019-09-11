@@ -1,4 +1,6 @@
-<?php require_once 'header.php'; ?>
+<?php 
+session_start();
+require_once 'header.php'; ?>
 <div class='container'>
     <!-- Photo de l'association -->
     <div class='img'>

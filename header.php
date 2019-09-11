@@ -22,11 +22,11 @@
                 <a href="../../français.php"><img src="../../assets/img/fr.jpg" class="drapeau" alt="Drapeau français, passer le site en français"></a>
                 <!-- Titre du site -->
                 <div class='responsiveTitle'>
-                <h1 class="title">Institut Picard de Langues</h1>
-                <!-- Titre responsive -->
-                <h1 class="titleMobile">I.P.L France</h1>
-                <p class="teachIntro">We teach french and english.</p>
-                <hr class="hrMobile">
+                    <h1 class="title">Institut Picard de Langues</h1>
+                    <!-- Titre responsive -->
+                    <h1 class="titleMobile">I.P.L France</h1>
+                    <p class="teachIntro">We teach french and english.</p>
+                    <hr class="hrMobile">
                 </div>
                 <!-- navbar -->
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -42,26 +42,36 @@
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="../../informations.php">Informations</a>
                             </li>
-                            <li class="nav-item active hover">
-                                <a class="nav-link" href="/views/Test/TestView.php">Test</a>
-                            </li>
+                            <!-- Bouton Test apparait seulement si l'utilisateur est connecté -->
+                            <?php if (isset($_SESSION['user'])) { ?>
+                                <li class="nav-item active hover">
+                                    <a class="nav-link" href="/views/Test/TestView.php">Test</a>
+                                </li>
+                            <?php } ?>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="../../contact.php">Nous contacter</a>
                             </li>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="/views/User/addUserForm.php">Inscription</a>
                             </li>
+                            <!-- Si l'utilisateur est connecter alors le bouton Connexion devient le bouton Profil -->
+                             <?php if (!isset($_SESSION['user'])) { ?>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="/views/User/userLogin.php">Connexion</a>
                             </li>
+                             <?php }else{ ?>
+                            <li class="nav-item active hover">
+                                <a class="nav-link" href="/views/User/profilUser.php">Profil</a>
+                            </li>
+                             <?php } ?>
                         </ul>
                     </div>
                 </nav> 
             </div>
             <!-- Div pour l'image en dessous de la navbar -->
-                <div class='pictureResponsive'>
-                    <img src="../../assets/img/cathedrale.png" alt="">
-                </div>
+            <div class='pictureResponsive'>
+                <img src="../../assets/img/cathedrale.png" alt="">
+            </div>
             <!-- Div pour le slogan du site -->
             <div class='intro'>
                 <p class="introIpl">IPL France</p>
