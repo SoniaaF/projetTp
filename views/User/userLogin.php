@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once '../../header.php';
 include '../../controllers/User/userLoginCtrl.php';
+require_once '../../header.php';
 ?>
 <div id="container">
     <!-- zone de connexion -->
@@ -19,7 +19,7 @@ include '../../controllers/User/userLoginCtrl.php';
 
     </form>
     <?php if (isset($connectError)) { ?>
-        <p class="alert-danger alert"><?= $connectError ?></p>
+        <p class="alert alert-danger"><?= $connectError ?></p>
     <?php } ?>
 </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 <div class="row color">

@@ -14,4 +14,4 @@ require_once '../../header.php';
 <form action="" method="POST">
     <button type='submit' name='disconnect'>Deconnexion</button>
 </form>
-<?php require_once '../../footer.php';
+<?php require_once '../../footer.php'; ?>

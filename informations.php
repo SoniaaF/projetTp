@@ -1,4 +1,6 @@
-<?php require_once 'header.php'; ?>
+<?php
+session_start();
+require_once 'header.php'; ?>
 
 <div class='container-fluid information'>
     <img class='construct' src="assets/img/page_en_construction.png" alt="image indiquant que la page est en construction">

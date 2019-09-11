@@ -42,23 +42,21 @@
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="../../informations.php">Informations</a>
                             </li>
-                            <!-- Bouton Test apparait seulement si l'utilisateur est connecté -->
-                            <?php if (isset($_SESSION['user'])) { ?>
                                 <li class="nav-item active hover">
                                     <a class="nav-link" href="/views/Test/TestView.php">Test</a>
                                 </li>
-                            <?php } ?>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="../../contact.php">Nous contacter</a>
                             </li>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="/views/User/addUserForm.php">Inscription</a>
                             </li>
-                            <!-- Si l'utilisateur est connecter alors le bouton Connexion devient le bouton Profil -->
+                            <!-- Si personne n'est connecté on affiche le bouton Connexion -->
                              <?php if (!isset($_SESSION['user'])) { ?>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="/views/User/userLogin.php">Connexion</a>
                             </li>
+                            <!-- Si l'utilisateur est connecter alors le bouton Connexion devient le bouton Profil -->
                              <?php }else{ ?>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="/views/User/profilUser.php">Profil</a>

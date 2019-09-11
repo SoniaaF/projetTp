@@ -18,7 +18,7 @@ class Test {
         $testList = $testRequest->fetchAll(PDO::FETCH_OBJ);
         return $testList;
     }
-    // Methode qui créer une question
+    // Méthode qui créer une question
     public function createTest($Question, $Answer1, $Answer2, $Answer3, $Answer4, $TrueAnswer) {
         $sql = "INSERT INTO Test (Question, Answer1, Answer2, Answer3, Answer4, TrueAnswer) VALUES (:Question, :Answer1, :Answer2, :Answer3 , :Answer4, :TrueAnswer)";
         // Lier les variables à l'instruction 'prepare' en tant que valeurs
@@ -34,7 +34,7 @@ class Test {
         $error = $req->errorInfo();
     }
 
-    // Methode qui met à jour une question
+    // Méthode qui met à jour une question
     public function updateTest($id, $Question, $Answer1, $Answer2, $Answer3, $Answer4, $TrueAnswer) {
         try {
             $sql = "UPDATE Test SET Question = :Question, Answer1 = :Answer1 , Answer2 = :Answer2 , Answer3 = :Answer3 , Answer4 = :Answer4 , TrueAnswer = :TrueAnswer WHERE id = :id";
@@ -57,7 +57,7 @@ class Test {
         }
     }
 
-    // Fonction supprimer une question
+    // Méthode qui supprime une question
     public function deleteTest($id) {
         try {
             $sql = "DELETE FROM Test WHERE id = :id";
