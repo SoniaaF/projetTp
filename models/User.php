@@ -103,17 +103,6 @@ class User {
         $request->execute();
     }
 
-    public function verifyUser() {
-        $request = $this->db->prepare('SELECT * FROM `users` WHERE `id` = :id');
-        $request->bindValue(':id', $this->id, PDO::PARAM_INT);
-        if ($request->execute()) {
-            if ($request->columnCount() > 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public function getUserById() {
         $request = $this->db->prepare('SELECT * FROM `User` WHERE `id` = :id');
         $request->bindValue(':id', $this->id, PDO::PARAM_INT);

@@ -62,6 +62,10 @@ if (count($_POST) > 3) {
     if (empty($formError)) {
         //on appelle la methode qui insere l'utilisateur dans la BDD
         $User = $newUser->createUser($lastName, $firstName, $mail, $password);
+        $_SESSION['confirmMessage'] = 'Votre inscription a bien été prise en compte !';
+        $_SESSION['redirection'] = '../../views/User/userLogin.php';
+        header('Location:../../views/User/confirmMessage.php');
+        exit();
     }
 }
 require_once '../../views/User/addUserForm.php';

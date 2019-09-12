@@ -1,6 +1,16 @@
 body{
     font-family: 'Merriweather', serif;
 }
+.validation{
+    margin-top: 50px;
+    
+    color: white;
+    font-weight: bold;
+}
+.linkConnect{
+    color: white;
+    font-weight: bold;
+}
 /* Définition du titre */
 .title{
     text-align: center;
@@ -76,11 +86,10 @@ hr{
     color: #404143;
     font-weight: bold;
 }
-/* Création de l'effet parallax */
+/* Définition de l'image derrière la navbar */
 .picture{
     background-image: url(../img/amiens1.jpg);
-    height: 500px;
-    /*background-attachment: fixed;*/
+    height: 420px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 135%;
@@ -226,6 +235,7 @@ div#infobulle:hover ul {
         font-family: 'Playfair Display', serif;
         color: white;
         background-color: black;
+        z-index: 100;
     }
     .introIpl{
         display:none;
@@ -254,14 +264,13 @@ div#infobulle:hover ul {
         margin-top: -15px;
         border-radius: 5px;
     }
-    .pictureResponsive{
+    .picture{
+        background-image: url(../../assets/img/cathedrale.png);
         display: block;
         background-color: black;
-        margin-top: 10px;
-        position: initial;
-    }
-    .picture{
-        background-color: black;
+        position: relative;
+        z-index: 8;
+        background-size: 100%;
     }
     .signup{
         background-color: black;

@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once '../../header.php';
 include '../../controllers/User/addUserFormCtrl.php';
+require_once '../../header.php';
 ?>
 <div class="container-fluid">
     <div class="row flex-column align-items-center color">
@@ -45,8 +45,8 @@ include '../../controllers/User/addUserFormCtrl.php';
                             <span class="help-block error"><?= $formError['password'] ?? '' ?></span>
                         </div>
                         <div class="m-3 p-0 d-flex justify-content-around">
-                            <input type="submit" name="submit" class="btn btn-outline-primary font-weight-bold mr-0" value="Envoyer">              
-                        </div> 
+                            <input type="submit" name="submit" class="btn btn-outline-dark font-weight-bold mr-0" value="Inscription">              
+                        </div>
                     </form>
                     <p class="loginhere">
                         Vous avez déjà un compte ? <a href="../../views/User/userLogin.php" class="loginhere-link">Cliquez ici !</a>

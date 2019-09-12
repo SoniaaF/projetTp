@@ -37,16 +37,16 @@
                     <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="../../français.php">Accueil</a>
+                                <a class="nav-link" href="../../acceuil">Accueil</a>
                             </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="../../informations.php">Informations</a>
+                                <a class="nav-link" href="../../informations">Informations</a>
                             </li>
                                 <li class="nav-item active hover">
                                     <a class="nav-link" href="/views/Test/TestView.php">Test</a>
                                 </li>
                             <li class="nav-item active hover">
-                                <a class="nav-link" href="../../contact.php">Nous contacter</a>
+                                <a class="nav-link" href="../../contact">Nous contacter</a>
                             </li>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="/views/User/addUserForm.php">Inscription</a>
@@ -66,10 +66,12 @@
                     </div>
                 </nav> 
             </div>
-            <!-- Div pour l'image en dessous de la navbar -->
-            <div class='pictureResponsive'>
+        
+            <!-- Div pour l'image en dessous de la navbar en responsive -->
+<!--            <div class='pictureResponsive'>
                 <img src="../../assets/img/cathedrale.png" alt="">
-            </div>
+            </div>-->
+          
             <!-- Div pour le slogan du site -->
             <div class='intro'>
                 <p class="introIpl">IPL France</p>
