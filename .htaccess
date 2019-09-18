@@ -1,4 +1,4 @@
 RewriteEngine on
-RewriteRule ^acceuil$ français.php
+RewriteRule ^acceuil$ index.php
 RewriteRule ^informations$ informations.php
 RewriteRule ^contact$ contact.php

@@ -6,7 +6,7 @@ require_once '../../header.php';
 <div class="container-fluid">
     <div class="row flex-column align-items-center color">
         <section class="signup">
-            <div class="container form-signup">
+            <div class="container">
                 <div class="signup-content">
                     <form action="" method="POST" id="signup-form" class="signup-form">
                         <h2 class="form-title">Créer un compte</h2>
@@ -48,8 +48,8 @@ require_once '../../header.php';
                             <input type="submit" name="submit" class="btn btn-outline-dark font-weight-bold mr-0" value="Inscription">              
                         </div>
                     </form>
-                    <p class="loginhere">
-                        Vous avez déjà un compte ? <a href="../../views/User/userLogin.php" class="loginhere-link">Cliquez ici !</a>
+                    <p class="loginHere">
+                        Vous avez déjà un compte ? <a href="../../views/User/userLogin.php" class="loginHere-link">Cliquez ici !</a>
                     </p>
                 </div>
             </div>
