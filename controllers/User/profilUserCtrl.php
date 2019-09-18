@@ -7,6 +7,6 @@ $pageTitle = $_SESSION['user']['lastName'] . ' ' . $_SESSION['user']['firstName'
 
 if (isset($_POST['disconnect'])) {
     $_SESSION = [];
-    header('Location:../../français.php');
+    header('Location:../../index.php');
 }
 ?>
