@@ -20,8 +20,8 @@ require_once '../../header.php';
                     <button type="submit" name="disconnect" class="btn btn-outline-dark font-weight-bold">Deconnexion</button>
                 </form>
                 <form action="" method="POST">
-                    <button type="submit" name="modify" class="btn btn-outline-success font-weight-bold mt-4">Modifier</button>
-                    <button type="submit" name="submit" class="btn btn-outline-danger font-weight-bold mt-4"><a href="deleteUser.php">Supprimer</a></button>
+<!--                    <button type="submit" name="modify" class="btn btn-outline-success font-weight-bold mt-4">Modifier</button>
+                    <button type="submit" name="submit" class="btn btn-outline-danger font-weight-bold mt-4"><a href="deleteUser.php">Supprimer</a></button>-->
                 </form>
                 <form action="" method="POST">
                 </form>
