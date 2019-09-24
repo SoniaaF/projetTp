@@ -42,36 +42,38 @@
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="../../informations">Informations</a>
                             </li>
-                                <li class="nav-item active hover">
-                                    <a class="nav-link" href="/views/Test/TestView.php">Test</a>
-                                </li>
+                            <li class="nav-item active hover">
+                                <a class="nav-link" href="/views/Test/TestView.php">Test</a>
+                            </li>
                             <li class="nav-item active hover">
                                 <a class="nav-link" href="../../contact">Nous contacter</a>
                             </li>
-                            <li class="nav-item active hover">
-                                <a class="nav-link" href="/views/User/addUserForm.php">Inscription</a>
-                            </li>
+                            <!-- Si personne n'est connecté on affiche le bouton Inscription -->
+                            <?php if (!isset($_SESSION['user'])) { ?>
+                                <li class="nav-item active hover">
+                                    <a class="nav-link" href="/views/User/addUserForm.php">Inscription</a>
+                                </li>
+                                <!-- Si un utilisateur est connecté alors le bouton Inscription deviens le bouton QCM -->
+                            <?php } elseif($_SESSION['user']['security']==2) { ?>
+                                <li class="nav-item active hover">
+                                    <a class="nav-link" href="../../TestEdit.php">QCM</a>
+                                </li>
+                            <?php } ?>
                             <!-- Si personne n'est connecté on affiche le bouton Connexion -->
-                             <?php if (!isset($_SESSION['user'])) { ?>
-                            <li class="nav-item active hover">
-                                <a class="nav-link" href="/views/User/userLogin.php">Connexion</a>
-                            </li>
-                            <!-- Si l'utilisateur est connecter alors le bouton Connexion devient le bouton Profil -->
-                             <?php }else{ ?>
-                            <li class="nav-item active hover">
-                                <a class="nav-link" href="/views/User/profilUser.php">Profil</a>
-                            </li>
-                             <?php } ?>
+                            <?php if (!isset($_SESSION['user'])) { ?>
+                                <li class="nav-item active hover">
+                                    <a class="nav-link" href="/views/User/userLogin.php">Connexion</a>
+                                </li>
+                                <!-- Si l'utilisateur est connecter alors le bouton Connexion devient le bouton Profil -->
+                            <?php } else { ?>
+                                <li class="nav-item active hover">
+                                    <a class="nav-link" href="/views/User/profilUser.php">Profil</a>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </nav> 
             </div>
-        
-            <!-- Div pour l'image en dessous de la navbar en responsive -->
-<!--            <div class='pictureResponsive'>
-                <img src="../../assets/img/cathedrale.png" alt="">
-            </div>-->
-          
             <!-- Div pour le slogan du site -->
             <div class='intro'>
                 <p class="introIpl">IPL France</p>

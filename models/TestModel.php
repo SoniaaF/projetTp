@@ -11,6 +11,14 @@ class Test {
             die($ex->getMessage());
         }
     }
+    // Récupere les information d'une question dans la base de données
+    public function getTest($id) {
+        $sql = 'SELECT * FROM Test WHERE id = :id';
+        $request = $this->db->prepare($sql);
+        $request->bindValue(':id', $id, PDO::PARAM_INT);
+        $request->execute();
+        return $request->fetch(PDO::FETCH_ASSOC);
+    }
 
     public function getAllTest() {
         $sql = 'SELECT * FROM Test';

@@ -1,4 +1,7 @@
-<?php require_once 'header.php'; ?>
+<?php
+session_start();
+require_once 'header.php';
+?>
 <div class="container-fluid color">
     <!-- Div pour les information de contact avec google map -->
     <div class="row col-6 map">

@@ -9,5 +9,5 @@ $redirection = $_SESSION['redirection'];
 unset($_SESSION['confirmMessage']);
 unset($_SESSION['redirection']);
 
-header('Refresh:2;URL=' . $redirection);
+header('Refresh:5;URL=' . $redirection);
 ?>

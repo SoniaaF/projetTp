@@ -6,8 +6,8 @@ include '../../controllers/Test/TestReadCtrl.php';
 <!-- Si personne n'est connecté, on affiche un message pour dire que le QCM est accessible que pour les personnes inscrit -->
 <?php if (!isset($_SESSION['user'])) { ?>
     <h2 class="text-center mt-4">Inscrivez-vous pour passer le test de positionement !</h2>
-    <p><a href="../User/addUserForm.php">Inscription</a></p>
-    <p><a href="../User/userLogin.php">Connexion</a></p>
+    <p class="Qcm"><a href="../User/addUserForm.php" class="LoginLink">Inscription</a></p>
+    <p class="Qcm"><a href="../User/userLogin.php" class="LoginLink">Connexion</a></p>
 <?php } else { ?>
     <!-- Si l'utilisateur est connecté alors on affiche le QCM -->
     <div class='container-fluid information'>

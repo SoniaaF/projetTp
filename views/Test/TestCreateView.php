@@ -19,25 +19,25 @@ include '../../controllers/Test/TestCreateCtrl.php';
                         <div class="form-group">
                             <!-- Réponse 1 -->
                             <label for="Answer1" class='font-weight-bold'>Réponse 1 :</label>
-                            <input type="text" class="form-control" name="Answer1" placeholder="Votre prénom" value="<?= $Answer1 ?? '' ?>" required>
+                            <input type="text" class="form-control" name="Answer1" placeholder="Réponse 1" value="<?= $Answer1 ?? '' ?>" required>
                             <span class="help-block error"><?= $formError['Answer1'] ?? '' ?></span>
                         </div>
                         <div class="form-group">
                             <!-- Réponse 2 -->
                             <label for="Answer2" class='font-weight-bold'>Réponse 2 :</label>
-                            <input type="text" class="form-control" name="Answer2" placeholder="Votre prénom" value="<?= $Answer2 ?? '' ?>" required>
+                            <input type="text" class="form-control" name="Answer2" placeholder="Réponse 2" value="<?= $Answer2 ?? '' ?>" required>
                             <span class="help-block error"><?= $formError['Answer2'] ?? '' ?></span>
                         </div>
                         <div class="form-group">
                             <!-- Réponse 3 -->
                             <label for="Answer3" class='font-weight-bold'>Réponse 3 :</label>
-                            <input type="text" class="form-control" name="Answer3" placeholder="Votre prénom" value="<?= $Answer3 ?? '' ?>" required>
+                            <input type="text" class="form-control" name="Answer3" placeholder="Réponse 3" value="<?= $Answer3 ?? '' ?>" required>
                             <span class="help-block error"><?= $formError['Answer3'] ?? '' ?></span>
                         </div>
                         <div class="form-group">
                             <!-- Réponse 4 -->
                             <label for="Answer4" class='font-weight-bold'>Réponse 4 :</label>
-                            <input type="text" class="form-control" name="Answer4" placeholder="Votre prénom" value="<?= $Answer4 ?? '' ?>" required>
+                            <input type="text" class="form-control" name="Answer4" placeholder="Réponse 4" value="<?= $Answer4 ?? '' ?>" required>
                             <span class="help-block error"><?= $formError['Answer4'] ?? '' ?></span>
                         </div>
                         <div class="form-group">

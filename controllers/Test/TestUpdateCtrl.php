@@ -6,7 +6,13 @@ $stringPattern = '/^[a-zA-Záàâäãåçéèêëíìîïñóòôöõúùûüý�
 //   On test chaque input en fonction de son pattern et si ils ne correspondent pas on insert un message d'erreur
 $formError = [];
 
-if ($_POST) {
+if (isset($_POST['select'])) {
+    $test = new Test();
+    $selectedTest = $test->getTest($_POST['id']);
+    var_dump($selectedTest);
+}
+
+if ($_POST['submit']) {
     // Si le champs Question est vide
     if (empty($_POST['Question'])) {
         $formError['Question'] = 'Veuillez entrer une question.';
@@ -59,7 +65,7 @@ if ($_POST) {
     }
 }
 if (isset($_POST['submit'])) {
-    $id = isset($_POST['id']) ? $_POST['id'] : 0;
+    $id = $_POST['submit'];
     $Question = isset($_POST['Question']) ? $_POST['Question'] : 0;
     $Answer1 = isset($_POST['Answer1']) ? $_POST['Answer1'] : 0;
     $Answer2 = isset($_POST['Answer2']) ? $_POST['Answer2'] : 0;
