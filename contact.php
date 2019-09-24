@@ -6,7 +6,7 @@ require_once 'header.php';
     <!-- Div pour les information de contact avec google map -->
     <div class="row col-6 map">
         <div class="container renseignement">
-            <p class="text-center Ipl">Institut Picard de Langue</p>
+            <p class="text-center Ipl">Institut Picard de Langues</p>
             <p><b>Numéro de téléphone :</b> 06.10.20.45.85</p>
             <p><b>Adresse mail :</b> raphaelvillatte@gmail.com</p>
             <p><b>Adresse :</b> 8 Rue de l'Écuyer, 80000 Amiens, France</p>

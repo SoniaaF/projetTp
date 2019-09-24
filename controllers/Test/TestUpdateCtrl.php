@@ -3,15 +3,15 @@
 include_once '../../models/TestModel.php';
 // pattern pour la vérification du formulaire
 $stringPattern = '/^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ 0-9\'?._-]{1,60}$/';
-//   On test chaque input en fonction de son pattern et si ils ne correspondent pas on insert un message d'erreur
+// Tableau vide pour stocker les message d'erreur
 $formError = [];
-
+// Récupére l'id du 'select' pour afficher la question
 if (isset($_POST['select'])) {
     $test = new Test();
     $selectedTest = $test->getTest($_POST['id']);
-    var_dump($selectedTest);
 }
 
+//   On test chaque input en fonction de son pattern et si ils ne correspondent pas on insert un message d'erreur
 if ($_POST['submit']) {
     // Si le champs Question est vide
     if (empty($_POST['Question'])) {

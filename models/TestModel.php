@@ -11,7 +11,7 @@ class Test {
             die($ex->getMessage());
         }
     }
-    // Récupere les information d'une question dans la base de données
+    // Récupere les informations d'une question dans la base de donnée
     public function getTest($id) {
         $sql = 'SELECT * FROM Test WHERE id = :id';
         $request = $this->db->prepare($sql);
@@ -19,7 +19,7 @@ class Test {
         $request->execute();
         return $request->fetch(PDO::FETCH_ASSOC);
     }
-
+    // Récupere les informations
     public function getAllTest() {
         $sql = 'SELECT * FROM Test';
         $testRequest = $this->db->query($sql);
@@ -55,11 +55,8 @@ class Test {
             $req->bindValue(':Answer3', $Answer3, PDO::PARAM_STR);
             $req->bindValue(':Answer4', $Answer4, PDO::PARAM_STR);
             $req->bindValue(':TrueAnswer', $TrueAnswer, PDO::PARAM_STR);
-//            var_dump($req);
-//            die();
             // Exécution de la requête SQL
             $req->execute();
-//            $error = $req->errorInfo();
         } catch (Exception $e) {
             die($e->getMessage());
         }

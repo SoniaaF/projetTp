@@ -35,13 +35,12 @@ require_once '../../header.php';
                                 <ul>Doit contenir au moins :
                                     <li>- Un chiffre</li>
                                     <li>- Une majuscule</li>
-                                    <li>- Une lettre</li>
+                                    <li>- Une minuscule</li>
                                     <li>- Un caractère spécial (!,&,$,...)</li>
                                 </ul>                        
                                 <input type="password" class="form-control" name="password" placeholder="Mot de passe" value="<?= $password ?? '' ?>" required>
                             </div>
-                            <small class="form-text">Minimum 8 caractère</small>
-                            <small></small>
+                            <small class="form-text">Minimum 8 caractères</small>
                             <span class="help-block error"><?= $formError['password'] ?? '' ?></span>
                         </div>
                         <div class="m-3 p-0 d-flex justify-content-around">
